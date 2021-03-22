@@ -3,7 +3,6 @@ session_start();
 echo "<br>Welcome ".$_SESSION['user_name']." ".$_SESSION['last_name']." to WE-SHARE";
 ?>
 
-
 <!DOCTYPE html>
 <html>
 <head>
