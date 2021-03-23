@@ -1,18 +1,67 @@
 <!Doctype html>
 <html>
-<body bgcolor="skyblue">
+<head>
+	<style type="text/css">
+	.login_box{
+		/*		T 		R 	 B 	  L*/
+		margin:130px 500px 50px 550px;
+		padding:2px 30px 10px 30px;
+		background-color: white;
+		width:25%; 
+		color: black;
+		font-size: 30px;
+		font-style: italic;
+
+	}
+
+	p{}
+	
+	input{
+		font-size: 30px;
+		border-style: solid;
+		border-radius: 10px;}
+	
+	.input_box{width:none;
+		background-color: #E9D9D5;
+		font-style: italic;}
+	
+	.login_button{
+		margin-left: 32%;
+		background-color: #f08f6b}
+
+	button{
+		margin-left: 28%;
+		background-color: #f08f6b;
+		font-size: 30px;
+		border-radius: 10px;
+		border-style: solid;
+	}
+	
+	body{
+		/*background-color: coral*/
+		background-image: linear-gradient(to right, coral,#C0C0C0);
+		margin: 0px;
+		padding: 0px;
+	}
+	</style>
+
+</head>
+<body>
 
 <!--logindetail.php-->
+<div class="login_box">
 <form action="" method="POST" name="login">
-<p>Username :<br><input type="email" name="username" placeholder="abc@gmail.com" required></p>
-<p>Password :<br><input type="password" name="password" placeholder="Password" required></p>
-<p><input type="submit" name="s" value="Login"></p>
+<p>Username :<br><input class="input_box" type="email" name="username" placeholder=" abc@gmail.com" required></p>
+<p>Password :<br><input class="input_box" type="password" name="password" placeholder=" Password" required></p>
+<p><input class="login_button" type="submit" name="s" value="Login"></p>
 </form>
 
-<?php
-//include('connect.php');
+<form action="register.php" method="POST">
+<p style="text-align: center;">New User? Register First</p>
+<p><button>Register</button></p>
+</form>
 
-?>
+
 
 <?php
 if(isset($_POST['s']))
@@ -39,7 +88,7 @@ if(isset($_POST['s']))
 		//echo "<br>Login succesful";	
 	//}
 	//if(!$count>0){
-		echo "<br>Login unsuccessful";
+		echo "<p style=color:red;text-align:center;>Login unsuccessful</p>";
 	//	}
 
 	//$qry1="select firstname from register where email='$username'";
@@ -48,11 +97,7 @@ if(isset($_POST['s']))
 
 	}
 ?>
-
-<form action="register.php" method="POST">
-<p>New User Register First</p>
-<p><button>Register</button></p>
-</form>
+</div>
 
 </body>
 </html> 

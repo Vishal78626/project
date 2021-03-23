@@ -1,11 +1,11 @@
 <?php
-echo "<br>hello";
+//echo "<br>hello";
 $con = mysqli_connect('localhost','root','','college');
 if(!$con)
 {
 echo " not connected";
 } 
 else{
-echo " connected";
+//echo " connected";
 }
 ?>
