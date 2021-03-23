@@ -5,13 +5,13 @@
 	.login_box{
 		/*		T 		R 	 B 	  L*/
 		margin:130px 500px 50px 550px;
-		padding:2px 30px 10px 30px;
-		background-color: white;
+		padding:2px 0px 10px 30px;
+		background-color: #fbf0f0;
 		width:25%; 
 		color: black;
 		font-size: 30px;
 		font-style: italic;
-
+		border:3px solid #f08f6b;
 	}
 
 	p{}
@@ -23,7 +23,8 @@
 	
 	.input_box{width:none;
 		background-color: #E9D9D5;
-		font-style: italic;}
+		font-style: italic;
+	}
 	
 	.login_button{
 		margin-left: 32%;
@@ -38,11 +39,13 @@
 	}
 	
 	body{
-		/*background-color: coral*/
+		/*background-color: coral;*/
 		background-image: linear-gradient(to right, coral,#C0C0C0);
+		
 		margin: 0px;
 		padding: 0px;
-	}
+		}
+
 	</style>
 
 </head>
@@ -60,8 +63,6 @@
 <p style="text-align: center;">New User? Register First</p>
 <p><button>Register</button></p>
 </form>
-
-
 
 <?php
 if(isset($_POST['s']))
