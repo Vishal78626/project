@@ -55,7 +55,11 @@
 <div class="login_box">
 <form action="" method="POST" name="login">
 <p>Username :<br><input class="input_box" type="email" name="username" placeholder=" abc@gmail.com" required></p>
-<p>Password :<br><input class="input_box" type="password" name="password" placeholder=" Password" required></p>
+
+<p>Password :<br><input class="input_box" type="password" id="show" name="password" placeholder=" Password" required>
+<br><input type="checkbox" onclick="show_pass()"><span style="font-size: 20px;font-weight: bold;">Show Password</span>
+</p>
+
 <p><input class="login_button" type="submit" name="s" value="Login"></p>
 </form>
 
@@ -99,6 +103,16 @@ if(isset($_POST['s']))
 	}
 ?>
 </div>
-
+<script type="text/javascript">
+	function show_pass(){
+	var r=document.getElementById("show");
+	if (r.type === "password") {
+		r.type="text";
+	}
+	else{
+		r.type="password";
+	}
+	}
+</script>
 </body>
 </html> 
