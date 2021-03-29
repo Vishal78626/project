@@ -1,34 +1,34 @@
-<!Doctype html>
-<html>
-<head>
+<!doctype html>
+<html lang="en">
+ <head>
+
+ 	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" type="text/css" href="bootstrap.css">
+
 	<style type="text/css">
 	.login_box{
 		/*		T 		R 	 B 	  L*/
 		margin:130px 500px 50px 550px;
 		padding:2px 0px 10px 30px;
-		background-color: #fbf0f0;
 		width:25%; 
-		color: black;
-		font-size: 30px;
-		font-style: italic;
-		border:3px solid #f08f6b;
 	}
-
-	p{}
 	
 	input{
 		font-size: 30px;
-		border-style: solid;
-		border-radius: 10px;}
+  		border-style: solid;
+  		border-radius: 10px;
+		}
 	
-	.input_box{width:none;
+	.input_box{
 		background-color: #E9D9D5;
 		font-style: italic;
 	}
 	
 	.login_button{
-		margin-left: 32%;
-		background-color: #f08f6b}
+		margin-left: 33%;
+		background-color: #f08f6b;}
 
 	button{
 		margin-left: 28%;
@@ -39,12 +39,14 @@
 	}
 	
 	body{
-		/*background-color: coral;*/
-		background-image: linear-gradient(to right, coral,#C0C0C0);
-		
+		/*background-color: coral;		
 		margin: 0px;
-		padding: 0px;
+		padding: 0px;*/
+		background-image: linear-gradient(to right, coral,#C0C0C0);
 		}
+	.check_box{
+		padding-left: 10px;
+	}
 
 	</style>
 
@@ -52,21 +54,32 @@
 <body>
 
 <!--logindetail.php-->
-<div class="login_box">
+<div class="container">
 <form action="" method="POST" name="login">
-<p>Username :<br><input class="input_box" type="email" name="username" placeholder=" abc@gmail.com" required></p>
 
-<p>Password :<br><input class="input_box" type="password" id="show" name="password" placeholder=" Password" required>
-<br><input type="checkbox" onclick="show_pass()"><span style="font-size: 20px;font-weight: bold;">Show Password</span>
-</p>
+<div class="mb-3">
+<label class="form-label">Username : </label>
+<input class="form-control" type="email" name="username" placeholder=" abc@gmail.com" required>
+</div>
 
+<div class="mb-3">
+<label class="form-label">Password : </label>
+<input class="form-control" type="password" id="show" name="password" placeholder=" Password" required>
+<p class="check_box"><input type="checkbox" onclick="show_pass()"><span style="font-size: 20px;font-style: italic;"> Show Password</span></p>
+</div>
+
+<div class="mb-3">
 <p><input class="login_button" type="submit" name="s" value="Login"></p>
 </form>
+</div>
 
 <form action="register.php" method="POST">
-<p style="text-align: center;">New User? Register First</p>
+<div class="mb-3">
+<p style="padding-left:21%;font-size: 20px;font-weight: bold;font-style: italic;">New User? Register First</p>
 <p><button>Register</button></p>
+</div>
 </form>
+
 
 <?php
 if(isset($_POST['s']))
@@ -77,7 +90,6 @@ if(isset($_POST['s']))
 	session_start();
 	$qry="select firstname,lastname from register where email='$username' and password='$password'";
 	$result=mysqli_query($con,$qry);
-	
 	//$count=mysqli_num_rows($result);
 	$i=0;
 	while($r=mysqli_fetch_array($result)) {
@@ -93,16 +105,13 @@ if(isset($_POST['s']))
 		//echo "<br>Login succesful";	
 	//}
 	//if(!$count>0){
-		echo "<p style=color:red;text-align:center;>Login unsuccessful</p>";
+		echo "<p style=color:red;text-align:center;font-size:20px;>Login unsuccessful</p>";
 	//	}
-
-	//$qry1="select firstname from register where email='$username'";
-	//$result1=mysqli_query($con,$qry1);
-
-
 	}
 ?>
+
 </div>
+
 <script type="text/javascript">
 	function show_pass(){
 	var r=document.getElementById("show");
@@ -114,5 +123,6 @@ if(isset($_POST['s']))
 	}
 	}
 </script>
+
 </body>
 </html> 
