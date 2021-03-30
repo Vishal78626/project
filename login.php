@@ -8,30 +8,36 @@
     <link rel="stylesheet" type="text/css" href="bootstrap.css">
 
 	<style type="text/css">
-	.login_box{
-		/*		T 		R 	 B 	  L*/
-		margin:130px 500px 50px 550px;
-		padding:2px 0px 10px 30px;
-		width:25%; 
-	}
+		/*		T 		R 	 B 	  L
+		margin:130px 500px 50px 550px;*/
 	
-	input{
-		font-size: 20px;
+	/*input{
+		font-size: 10px;
   		border-style: solid;
-  		border-radius: 10px;
-		}
+  		border-radius: 2px;
+		}*/
 	
-	.input_box{
+	/*.input_box{
 		background-color: #E9D9D5;
 		font-style: italic;
-	}
+	}*/
 	
+	.form-control{
+		font-size: 25px;
+		padding: 10px;
+	}
+	.form-label{
+		margin-bottom: 0px;
+	}
 	.login_button{
 		margin-left: 33%;
+		padding: 3px;
 		background-color: #f08f6b;}
 
 	button{
 		margin-left: 28%;
+		margin-right: auto;
+		padding: 3px;
 		background-color: #f08f6b;
 		font-size: 30px;
 		border-radius: 10px;
@@ -39,11 +45,9 @@
 	}
 	
 	body{
-		/*background-color: coral;		
-		margin: 0px;
-		padding: 0px;*/
 		background-image: linear-gradient(to right, coral,#C0C0C0);
 		}
+
 	.check_box{
 		padding-left: 10px;
 	}
@@ -54,24 +58,26 @@
 <body>
 
 <!--logindetail.php-->
-<div class="container">
+
 <form action="" method="POST" name="login">
+<div class="container">
 
 <div class="mb-3">
 <label class="form-label">Username : </label>
-<input class="form-control" type="email" name="username" placeholder=" abc@gmail.com" required>
+<input class="form-control" type="email" name="username" placeholder="abc@gmail.com" required>
 </div>
 
 <div class="mb-3">
 <label class="form-label">Password : </label>
-<input class="form-control" type="password" id="show" name="password" placeholder=" Password" required>
+<input class="form-control" type="password" id="show" name="password" placeholder="password" required>
 <p class="check_box"><input type="checkbox" onclick="show_pass()"><span style="font-size: 20px;font-style: italic;"> Show Password</span></p>
 </div>
 
 <div class="mb-3">
-<p><input class="login_button" type="submit" name="s" value="Login"></p>
-</form>
+<p><button class="login_button" type="submit" name="s">Login</button></p>
 </div>
+</form>
+
 
 <form action="register.php" method="POST">
 <div class="mb-3">
