@@ -81,7 +81,7 @@
 
 <form action="register.php" method="POST">
 <div class="mb-3">
-<p style="padding-left:21%;font-size: 20px;font-weight: bold;font-style: italic;">New User? Register First</p>
+<p style="text-align:center;font-size: 20px;font-weight: bold;font-style: italic;">New User? Register First</p>
 <p><button>Register</button></p>
 </div>
 </form>
