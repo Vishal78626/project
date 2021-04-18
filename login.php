@@ -62,25 +62,25 @@
 <form action="" method="POST" name="login">
 <div class="container">
 
-<div class="mb-3">
-<label class="form-label">Username : </label>
+<div class="mb-0">
+<label class="form-label">&nbsp;Username : </label>
 <input class="form-control" type="email" name="username" placeholder="abc@gmail.com" required>
 </div>
 
-<div class="mb-3">
-<label class="form-label">Password : </label>
+<div class="mb-0">
+<label class="form-label">&nbsp;Password : </label>
 <input class="form-control" type="password" id="show" name="password" placeholder="password" required>
 <p class="check_box"><input type="checkbox" onclick="show_pass()"><span style="font-size: 20px;font-style: italic;"> Show Password</span></p>
 </div>
 
-<div class="mb-3">
+<div class="mb-0">
 <p><button class="login_button" type="submit" name="s">Login</button></p>
 </div>
 </form>
 
 
 <form action="register.php" method="POST">
-<div class="mb-3">
+<div class="mb-0">
 <p style="text-align:center;font-size: 20px;font-weight: bold;font-style: italic;">New User? Register First</p>
 <p><button>Register</button></p>
 </div>
