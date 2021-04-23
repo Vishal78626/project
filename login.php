@@ -44,6 +44,12 @@
 			padding-left: 10px;
 		}
 
+		/*.container{
+			margin-top: 10%;
+			margin-bottom: 10%;
+			display: block;
+		}*/
+
 	</style>
 
 </head>
@@ -52,7 +58,7 @@
 <!--logindetail.php-->
 <section class="container-fluid">
 	<section class="row justify-content-center align-items-center">
-		<section class="col-12 col-sm-12 col-md-12 col-lg-12">
+		<section class="col-12 col-sm-4 col-md-8 col-lg-12">
 			<form action="" method="POST" name="login">
 
 			    <div class="mb-0">
