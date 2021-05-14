@@ -314,9 +314,9 @@ select,
 optgroup,
 textarea {
   margin: 0;
-  font-family: inherit;
+  /*font-family: inherit;
   font-size: inherit;
-  line-height: inherit;
+  line-height: inherit;*/
 }
 
 button,
